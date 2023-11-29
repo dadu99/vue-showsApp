@@ -5,8 +5,7 @@
 
 
 <template>
-  <main>
-    <h1>Hero</h1>
+    <h1 class="title">Rick & Morty </h1>
     <Suspense>
       <template #default>
         <RickAndMortyCards></RickAndMortyCards>
@@ -17,8 +16,13 @@
         </div>
       </template>
     </Suspense>
-  </main>
 </template>
 
 <style scoped>
+.title {
+  padding: 20px;
+  font-size: 70px;
+  color: aliceblue;
+  text-align: center;
+}
 </style>
