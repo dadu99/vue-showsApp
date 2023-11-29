@@ -2,10 +2,8 @@
 import axios from "axios"
 import { ref } from 'vue';
 
-const response = await axios.get("https://rickandmortyapi.com/api/character");
-console.log(response);
-
-
+const response = await axios.get("https://rickandmortyapi.com/api/character/");
+console.log(response.data.results);
 
 
 </script>
@@ -13,7 +11,7 @@ console.log(response);
 
 <template>
     <div>
-        <h1>Rick and morty cards</h1>
-        <p>{{ response }}</p>
+        <h1>Rick and Morty cards</h1>
+        
     </div>
 </template>
