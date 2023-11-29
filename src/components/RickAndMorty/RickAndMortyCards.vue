@@ -32,7 +32,8 @@
                 :name="character.name"
             >
                 <p>{{character.location.name}}</p>
-                <p>{{ character.episode.length }}</p>
+                <p>Status: {{ character.status }}</p>
+                <p>Nr. episode: {{ character.episode.length }}</p>
             </Card>
         </div>
         <div v-else class="cards spinner">
@@ -58,11 +59,8 @@
     flex-wrap: wrap;
     
 }
-.cards h3 {
-    font-weight: bold;
-}
 .cards p {
-    font-size: 10px;
+    font-size: 18px;
 }
 .page-number {
     font-size: 16px;

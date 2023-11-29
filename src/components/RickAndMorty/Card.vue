@@ -24,6 +24,10 @@
     margin:10px 20px;
 
 }
+h3 {
+    font-weight: 300;
+    font-size: 27px;
+}
 .n-card img {
     height: 250px
 }
