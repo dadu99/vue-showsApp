@@ -1,20 +1,24 @@
 <script setup>
     import axios from "axios"
-    import { watch, ref, onMounted } from "vue";
+    import { watch, ref, onMounted, onUpdated } from "vue";
     import Card from "./Card.vue"
 
     const characters = ref(null);
     const page = ref(1);
 
     onMounted(async () => {
+        console.log("component is mounted");
         const response = await axios.get("https://rickandmortyapi.com/api/character")
         console.log(response);
         characters.value = response.data.results
     })
 
-    watch(page, async () => {
-        const res = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page.value}`);
-        characters.value = res.data.results;
+    onUpdated(() => {
+        console.log("component was updated");
+            watch(page, async () => {
+            const res = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page.value}`);
+            characters.value = res.data.results;
+        })
     })
 
 </script>
