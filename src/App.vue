@@ -11,8 +11,8 @@
         <RickAndMortyCards></RickAndMortyCards>
       </template>
       <template #fallback>
-        <div>
-          <p>Loading..</p>
+        <div class="cards spinner">
+          <NSpin size="large"/>
         </div>
       </template>
     </Suspense>
